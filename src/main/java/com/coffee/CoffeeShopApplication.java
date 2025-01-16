@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class CoffeeShopApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(CoffeeShopApplication.class, args);
 	}
 
