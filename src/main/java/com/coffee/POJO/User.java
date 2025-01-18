@@ -5,9 +5,12 @@ import lombok.Data;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
+import java.io.Serial;
 import java.io.Serializable;
 
-@Data   //when we use this annotation we dont need to add constructor and getter setter method
+@NamedQuery(name="User.findByEmailId",query = "select u from User where u.email=:email")
+
+@Data
 @Entity
 @DynamicUpdate
 @DynamicInsert
@@ -15,6 +18,7 @@ import java.io.Serializable;
 
 public class User implements Serializable {
 
+    @Serial
     private static final long serialVersionUID = 1L;
 
     @Id
